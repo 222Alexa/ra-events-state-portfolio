@@ -8,7 +8,7 @@ li.list-item {
 ul.projects-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .images-wrap {
