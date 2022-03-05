@@ -23,10 +23,8 @@ export default function Toolbar(props) {
         {filter}
       </button>
     );
-    btnsArr.push(btn);
+    return btnsArr.push(btn);
   });
-
-
 
   return <div className={"button-block"}>{btnsArr}</div>;
 }
@@ -34,6 +32,5 @@ export default function Toolbar(props) {
 Toolbar.propTypes = {
   filters: PropTypes.array.isRequired,
   selected: PropTypes.string.isRequired,
-  onSelectFilter: PropTypes.func.isRequired
-}
-
+  onSelectFilter: PropTypes.func.isRequired,
+};
