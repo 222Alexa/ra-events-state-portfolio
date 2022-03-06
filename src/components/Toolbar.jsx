@@ -10,23 +10,22 @@ export default function Toolbar(props) {
   }
   const { filters, selected, onSelectFilter } = props;
 
-  const btnsArr = [];
-
-  filters.map((filter) => {
-    const classActive = filter === selected ? " active" : "";
-    const btn = (
-      <button
-        key={usid.rand()}
-        className={"toolbar-item" + classActive}
-        onClick={onSelectFilter}
-      >
-        {filter}
-      </button>
-    );
-    return btnsArr.push(btn);
-  });
-
-  return <div className={"button-block"}>{btnsArr}</div>;
+  return (
+    <div className={"button-block"}>
+      {filters.map((filter) => {
+        const classActive = filter === selected ? " active" : "";
+        return (
+          <button
+            key={usid.rand()}
+            className={"toolbar-item" + classActive}
+            onClick={onSelectFilter}
+          >
+            {filter}
+          </button>
+        );
+      })}
+    </div>
+  );
 }
 
 Toolbar.propTypes = {

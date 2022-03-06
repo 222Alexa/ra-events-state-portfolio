@@ -16,20 +16,17 @@ export default function ProjectList(props) {
     return null;
   }
 
-  const items = [];
-
-  projects.items.forEach((elem) => {
-    const item = (
-      <li className={"list-item"} key={usid.rand()}>
-        {ProjectItem(elem)}
-      </li>
-    );
-    items.push(item);
-  });
-
   return (
     <div className={"projectList-wrap"}>
-      <ul className="projects-list">{items}</ul>
+      <ul className="projects-list">
+        {projects.items.map((elem) => {
+          return (
+            <li className={"list-item"} key={usid.rand()}>
+              {ProjectItem(elem)}
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
