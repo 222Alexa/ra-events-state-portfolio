@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ra-events-state-portfolio/static/css/main.6b2a1ed4.css",
+    "main.js": "/ra-events-state-portfolio/static/js/main.d87586b6.js",
+    "static/js/787.d26dcf8e.chunk.js": "/ra-events-state-portfolio/static/js/787.d26dcf8e.chunk.js",
+    "index.html": "/ra-events-state-portfolio/index.html",
+    "main.6b2a1ed4.css.map": "/ra-events-state-portfolio/static/css/main.6b2a1ed4.css.map",
+    "main.d87586b6.js.map": "/ra-events-state-portfolio/static/js/main.d87586b6.js.map",
+    "787.d26dcf8e.chunk.js.map": "/ra-events-state-portfolio/static/js/787.d26dcf8e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6b2a1ed4.css",
+    "static/js/main.d87586b6.js"
+  ]
+}
