@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
 import PropTypes from "prop-types";
+import Masonry from "react-masonry-css"
 
 const USID = require("usid");
 const usid = new USID();
@@ -16,17 +17,25 @@ export default function ProjectList(props) {
     return null;
   }
 
+const breakpoints = {
+  default:3,
+  1100:2,
+  700:1,
+}
   return (
-    <div className={"projectList-wrap"}>
-      <ul className="projects-list">
-        {projects.items.map((elem) => {
+    <div className="projectList-wrap">
+      <Masonry
+        breakpointCols={breakpoints}
+        className="my-masonry-grid"
+        columnClassName="my-masonry-grid_column"
+        >{projects.items.map((elem) => {
           return (
-            <li className={"list-item"} key={usid.rand()}>
+            <div className={"item"} key={usid.rand()}>
               {ProjectItem(elem)}
-            </li>
+            </div>
           );
         })}
-      </ul>
+     </Masonry>
     </div>
   );
 }

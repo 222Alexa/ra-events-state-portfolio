@@ -1,18 +1,8 @@
-li.list-item {
-  list-style-type: none;
-  width: 33, 3%;
-  margin: 10px;
-  /* height: 100%; */
-}
 
-ul.projects-list {
+.portfolio-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.images-wrap {
-  /* width: 100%; */
+  flex-direction: column;
+  align-items: center;
 }
 
 img.images {
@@ -22,9 +12,9 @@ img.images {
 
 .button-block {
   display: flex;
-  max-width: 500px;
+  min-width: 500px;
   justify-content: space-around;
-  margin-left: 45px;
+
   margin-top: 40px;
 }
 
@@ -38,7 +28,26 @@ button.toolbar-item.active {
   color: white;
 }
 
+.projectList-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
 
-
-
-
+/* Style your items */
+.my-masonry-grid_column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
